@@ -24,10 +24,10 @@ To configure the SDK to use a proxy server, initialize the proxy configuration d
 ## Usage Example
 
 ```java
-import com.example.discourse.DiscourseApiDocumentationClient;
+import com.example.discourse.DiscourseClient;
 import com.example.discourse.http.client.HttpProxyConfiguration;
 
-DiscourseApiDocumentationClient client = new DiscourseApiDocumentationClient.Builder()
+DiscourseClient client = new DiscourseClient.Builder()
   .httpClientConfig(configBuilder -> configBuilder
       .proxyConfig(new HttpProxyConfiguration.Builder("http://localhost",
           8080).auth("username", "password")))

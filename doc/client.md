@@ -13,7 +13,7 @@ The following parameters are configurable for the API Client:
 The API client can be initialized as follows:
 
 ```java
-import com.example.discourse.DiscourseApiDocumentationClient;
+import com.example.discourse.DiscourseClient;
 import com.example.discourse.Environment;
 import com.example.discourse.exceptions.ApiException;
 import com.example.discourse.http.response.ApiResponse;
@@ -21,7 +21,7 @@ import org.slf4j.event.Level;
 
 public class Program {
     public static void main(String[] args) {
-        DiscourseApiDocumentationClient client = new DiscourseApiDocumentationClient.Builder()
+        DiscourseClient client = new DiscourseClient.Builder()
             .loggingConfig(builder -> builder
                     .level(Level.DEBUG)
                     .requestConfig(logConfigBuilder -> logConfigBuilder.body(true))
