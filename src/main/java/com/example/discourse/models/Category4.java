@@ -33,14 +33,14 @@ public class Category4 {
     private OptionalNullable<String> descriptionExcerpt;
     private String topicUrl;
     private boolean readRestricted;
-    private int permission;
+    private Integer permission;
     private int notificationLevel;
     private String topicTemplate;
     private String topicTitlePlaceholder;
     private boolean hasChildren;
     private Integer subcategoryCount;
     private String sortOrder;
-    private String sortAscending;
+    private Boolean sortAscending;
     private boolean showSubcategoryList;
     private int numFeaturedTopics;
     private String defaultView;
@@ -82,14 +82,14 @@ public class Category4 {
      * @param  position  int value for position.
      * @param  topicUrl  String value for topicUrl.
      * @param  readRestricted  boolean value for readRestricted.
-     * @param  permission  int value for permission.
+     * @param  permission  Integer value for permission.
      * @param  notificationLevel  int value for notificationLevel.
      * @param  topicTemplate  String value for topicTemplate.
      * @param  topicTitlePlaceholder  String value for topicTitlePlaceholder.
      * @param  hasChildren  boolean value for hasChildren.
      * @param  subcategoryCount  Integer value for subcategoryCount.
      * @param  sortOrder  String value for sortOrder.
-     * @param  sortAscending  String value for sortAscending.
+     * @param  sortAscending  Boolean value for sortAscending.
      * @param  showSubcategoryList  boolean value for showSubcategoryList.
      * @param  numFeaturedTopics  int value for numFeaturedTopics.
      * @param  defaultView  String value for defaultView.
@@ -98,8 +98,6 @@ public class Category4 {
      * @param  defaultListFilter  String value for defaultListFilter.
      * @param  minimumRequiredTags  int value for minimumRequiredTags.
      * @param  navigateToFirstPostAfterRead  boolean value for navigateToFirstPostAfterRead.
-     * @param  allowedTags  List of Object value for allowedTags.
-     * @param  allowedTagGroups  List of Object value for allowedTagGroups.
      * @param  allowGlobalTags  boolean value for allowGlobalTags.
      * @param  requiredTagGroups  List of RequiredTagGroup value for requiredTagGroups.
      * @param  readOnlyBanner  String value for readOnlyBanner.
@@ -114,6 +112,8 @@ public class Category4 {
      * @param  description  String value for description.
      * @param  descriptionText  String value for descriptionText.
      * @param  descriptionExcerpt  String value for descriptionExcerpt.
+     * @param  allowedTags  List of Object value for allowedTags.
+     * @param  allowedTagGroups  List of Object value for allowedTagGroups.
      * @param  customFields  Object value for customFields.
      * @param  parentCategoryId  Integer value for parentCategoryId.
      * @param  formTemplateIds  List of Object value for formTemplateIds.
@@ -130,14 +130,14 @@ public class Category4 {
             int position,
             String topicUrl,
             boolean readRestricted,
-            int permission,
+            Integer permission,
             int notificationLevel,
             String topicTemplate,
             String topicTitlePlaceholder,
             boolean hasChildren,
             Integer subcategoryCount,
             String sortOrder,
-            String sortAscending,
+            Boolean sortAscending,
             boolean showSubcategoryList,
             int numFeaturedTopics,
             String defaultView,
@@ -146,8 +146,6 @@ public class Category4 {
             String defaultListFilter,
             int minimumRequiredTags,
             boolean navigateToFirstPostAfterRead,
-            List<Object> allowedTags,
-            List<Object> allowedTagGroups,
             boolean allowGlobalTags,
             List<RequiredTagGroup> requiredTagGroups,
             String readOnlyBanner,
@@ -162,6 +160,8 @@ public class Category4 {
             String description,
             String descriptionText,
             String descriptionExcerpt,
+            List<Object> allowedTags,
+            List<Object> allowedTagGroups,
             Object customFields,
             Integer parentCategoryId,
             List<Object> formTemplateIds,
@@ -226,14 +226,14 @@ public class Category4 {
      * @param  position  int value for position.
      * @param  topicUrl  String value for topicUrl.
      * @param  readRestricted  boolean value for readRestricted.
-     * @param  permission  int value for permission.
+     * @param  permission  Integer value for permission.
      * @param  notificationLevel  int value for notificationLevel.
      * @param  topicTemplate  String value for topicTemplate.
      * @param  topicTitlePlaceholder  String value for topicTitlePlaceholder.
      * @param  hasChildren  boolean value for hasChildren.
      * @param  subcategoryCount  Integer value for subcategoryCount.
      * @param  sortOrder  String value for sortOrder.
-     * @param  sortAscending  String value for sortAscending.
+     * @param  sortAscending  Boolean value for sortAscending.
      * @param  showSubcategoryList  boolean value for showSubcategoryList.
      * @param  numFeaturedTopics  int value for numFeaturedTopics.
      * @param  defaultView  String value for defaultView.
@@ -242,8 +242,6 @@ public class Category4 {
      * @param  defaultListFilter  String value for defaultListFilter.
      * @param  minimumRequiredTags  int value for minimumRequiredTags.
      * @param  navigateToFirstPostAfterRead  boolean value for navigateToFirstPostAfterRead.
-     * @param  allowedTags  List of Object value for allowedTags.
-     * @param  allowedTagGroups  List of Object value for allowedTagGroups.
      * @param  allowGlobalTags  boolean value for allowGlobalTags.
      * @param  requiredTagGroups  List of RequiredTagGroup value for requiredTagGroups.
      * @param  readOnlyBanner  String value for readOnlyBanner.
@@ -258,6 +256,8 @@ public class Category4 {
      * @param  description  String value for description.
      * @param  descriptionText  String value for descriptionText.
      * @param  descriptionExcerpt  String value for descriptionExcerpt.
+     * @param  allowedTags  List of Object value for allowedTags.
+     * @param  allowedTagGroups  List of Object value for allowedTagGroups.
      * @param  customFields  Object value for customFields.
      * @param  parentCategoryId  Integer value for parentCategoryId.
      * @param  formTemplateIds  List of Object value for formTemplateIds.
@@ -266,18 +266,18 @@ public class Category4 {
 
     protected Category4(int id, String name, String color, String textColor, String slug,
             int topicCount, int postCount, int position, String topicUrl, boolean readRestricted,
-            int permission, int notificationLevel, String topicTemplate,
+            Integer permission, int notificationLevel, String topicTemplate,
             String topicTitlePlaceholder, boolean hasChildren, Integer subcategoryCount,
-            String sortOrder, String sortAscending, boolean showSubcategoryList,
+            String sortOrder, Boolean sortAscending, boolean showSubcategoryList,
             int numFeaturedTopics, String defaultView, String subcategoryListStyle,
             String defaultTopPeriod, String defaultListFilter, int minimumRequiredTags,
-            boolean navigateToFirstPostAfterRead, List<Object> allowedTags,
-            List<Object> allowedTagGroups, boolean allowGlobalTags,
+            boolean navigateToFirstPostAfterRead, boolean allowGlobalTags,
             List<RequiredTagGroup> requiredTagGroups, String readOnlyBanner, String uploadedLogo,
             String uploadedLogoDark, String uploadedBackground, String uploadedBackgroundDark,
             boolean canEdit, String styleType, OptionalNullable<String> emoji,
             OptionalNullable<String> icon, OptionalNullable<String> description,
             OptionalNullable<String> descriptionText, OptionalNullable<String> descriptionExcerpt,
+            List<Object> allowedTags, List<Object> allowedTagGroups,
             OptionalNullable<Object> customFields, Integer parentCategoryId,
             List<Object> formTemplateIds, Object categoryTypes) {
         this.id = id;
@@ -704,19 +704,19 @@ public class Category4 {
 
     /**
      * Getter for Permission.
-     * @return Returns the int
+     * @return Returns the Integer
      */
     @JsonGetter("permission")
-    public int getPermission() {
+    public Integer getPermission() {
         return permission;
     }
 
     /**
      * Setter for Permission.
-     * @param permission Value for int
+     * @param permission Value for Integer
      */
     @JsonSetter("permission")
-    public void setPermission(int permission) {
+    public void setPermission(Integer permission) {
         this.permission = permission;
     }
 
@@ -830,19 +830,19 @@ public class Category4 {
 
     /**
      * Getter for SortAscending.
-     * @return Returns the String
+     * @return Returns the Boolean
      */
     @JsonGetter("sort_ascending")
-    public String getSortAscending() {
+    public Boolean getSortAscending() {
         return sortAscending;
     }
 
     /**
      * Setter for SortAscending.
-     * @param sortAscending Value for String
+     * @param sortAscending Value for Boolean
      */
     @JsonSetter("sort_ascending")
-    public void setSortAscending(String sortAscending) {
+    public void setSortAscending(Boolean sortAscending) {
         this.sortAscending = sortAscending;
     }
 
@@ -995,6 +995,7 @@ public class Category4 {
      * @return Returns the List of Object
      */
     @JsonGetter("allowed_tags")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public List<Object> getAllowedTags() {
         return allowedTags;
     }
@@ -1013,6 +1014,7 @@ public class Category4 {
      * @return Returns the List of Object
      */
     @JsonGetter("allowed_tag_groups")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public List<Object> getAllowedTagGroups() {
         return allowedTagGroups;
     }
@@ -1281,14 +1283,14 @@ public class Category4 {
                 + ", defaultTopPeriod=" + defaultTopPeriod + ", defaultListFilter="
                 + defaultListFilter + ", minimumRequiredTags=" + minimumRequiredTags
                 + ", navigateToFirstPostAfterRead=" + navigateToFirstPostAfterRead
-                + ", allowedTags=" + allowedTags + ", allowedTagGroups=" + allowedTagGroups
                 + ", allowGlobalTags=" + allowGlobalTags + ", requiredTagGroups="
                 + requiredTagGroups + ", readOnlyBanner=" + readOnlyBanner + ", uploadedLogo="
                 + uploadedLogo + ", uploadedLogoDark=" + uploadedLogoDark + ", uploadedBackground="
                 + uploadedBackground + ", uploadedBackgroundDark=" + uploadedBackgroundDark
                 + ", canEdit=" + canEdit + ", styleType=" + styleType + ", emoji=" + emoji
                 + ", icon=" + icon + ", description=" + description + ", descriptionText="
-                + descriptionText + ", descriptionExcerpt=" + descriptionExcerpt + ", customFields="
+                + descriptionText + ", descriptionExcerpt=" + descriptionExcerpt + ", allowedTags="
+                + allowedTags + ", allowedTagGroups=" + allowedTagGroups + ", customFields="
                 + customFields + ", parentCategoryId=" + parentCategoryId + ", formTemplateIds="
                 + formTemplateIds + ", categoryTypes=" + categoryTypes + "]";
     }
@@ -1304,10 +1306,11 @@ public class Category4 {
                 topicTitlePlaceholder, hasChildren, subcategoryCount, sortOrder, sortAscending,
                 showSubcategoryList, numFeaturedTopics, defaultView, subcategoryListStyle,
                 defaultTopPeriod, defaultListFilter, minimumRequiredTags,
-                navigateToFirstPostAfterRead, allowedTags, allowedTagGroups, allowGlobalTags,
-                requiredTagGroups, readOnlyBanner, uploadedLogo, uploadedLogoDark,
-                uploadedBackground, uploadedBackgroundDark, canEdit)
+                navigateToFirstPostAfterRead, allowGlobalTags, requiredTagGroups, readOnlyBanner,
+                uploadedLogo, uploadedLogoDark, uploadedBackground, uploadedBackgroundDark, canEdit)
                 .styleType(getStyleType())
+                .allowedTags(getAllowedTags())
+                .allowedTagGroups(getAllowedTagGroups())
                 .parentCategoryId(getParentCategoryId())
                 .formTemplateIds(getFormTemplateIds())
                 .categoryTypes(getCategoryTypes());
@@ -1334,14 +1337,14 @@ public class Category4 {
         private int position;
         private String topicUrl;
         private boolean readRestricted;
-        private int permission;
+        private Integer permission;
         private int notificationLevel;
         private String topicTemplate;
         private String topicTitlePlaceholder;
         private boolean hasChildren;
         private Integer subcategoryCount;
         private String sortOrder;
-        private String sortAscending;
+        private Boolean sortAscending;
         private boolean showSubcategoryList;
         private int numFeaturedTopics;
         private String defaultView;
@@ -1350,8 +1353,6 @@ public class Category4 {
         private String defaultListFilter;
         private int minimumRequiredTags;
         private boolean navigateToFirstPostAfterRead;
-        private List<Object> allowedTags;
-        private List<Object> allowedTagGroups;
         private boolean allowGlobalTags;
         private List<RequiredTagGroup> requiredTagGroups;
         private String readOnlyBanner;
@@ -1366,6 +1367,8 @@ public class Category4 {
         private OptionalNullable<String> description;
         private OptionalNullable<String> descriptionText;
         private OptionalNullable<String> descriptionExcerpt;
+        private List<Object> allowedTags;
+        private List<Object> allowedTagGroups;
         private OptionalNullable<Object> customFields;
         private Integer parentCategoryId;
         private List<Object> formTemplateIds;
@@ -1389,14 +1392,14 @@ public class Category4 {
          * @param  position  int value for position.
          * @param  topicUrl  String value for topicUrl.
          * @param  readRestricted  boolean value for readRestricted.
-         * @param  permission  int value for permission.
+         * @param  permission  Integer value for permission.
          * @param  notificationLevel  int value for notificationLevel.
          * @param  topicTemplate  String value for topicTemplate.
          * @param  topicTitlePlaceholder  String value for topicTitlePlaceholder.
          * @param  hasChildren  boolean value for hasChildren.
          * @param  subcategoryCount  Integer value for subcategoryCount.
          * @param  sortOrder  String value for sortOrder.
-         * @param  sortAscending  String value for sortAscending.
+         * @param  sortAscending  Boolean value for sortAscending.
          * @param  showSubcategoryList  boolean value for showSubcategoryList.
          * @param  numFeaturedTopics  int value for numFeaturedTopics.
          * @param  defaultView  String value for defaultView.
@@ -1405,8 +1408,6 @@ public class Category4 {
          * @param  defaultListFilter  String value for defaultListFilter.
          * @param  minimumRequiredTags  int value for minimumRequiredTags.
          * @param  navigateToFirstPostAfterRead  boolean value for navigateToFirstPostAfterRead.
-         * @param  allowedTags  List of Object value for allowedTags.
-         * @param  allowedTagGroups  List of Object value for allowedTagGroups.
          * @param  allowGlobalTags  boolean value for allowGlobalTags.
          * @param  requiredTagGroups  List of RequiredTagGroup value for requiredTagGroups.
          * @param  readOnlyBanner  String value for readOnlyBanner.
@@ -1418,16 +1419,15 @@ public class Category4 {
          */
         public Builder(int id, String name, String color, String textColor, String slug,
                 int topicCount, int postCount, int position, String topicUrl,
-                boolean readRestricted, int permission, int notificationLevel, String topicTemplate,
-                String topicTitlePlaceholder, boolean hasChildren, Integer subcategoryCount,
-                String sortOrder, String sortAscending, boolean showSubcategoryList,
-                int numFeaturedTopics, String defaultView, String subcategoryListStyle,
-                String defaultTopPeriod, String defaultListFilter, int minimumRequiredTags,
-                boolean navigateToFirstPostAfterRead, List<Object> allowedTags,
-                List<Object> allowedTagGroups, boolean allowGlobalTags,
-                List<RequiredTagGroup> requiredTagGroups, String readOnlyBanner,
-                String uploadedLogo, String uploadedLogoDark, String uploadedBackground,
-                String uploadedBackgroundDark, boolean canEdit) {
+                boolean readRestricted, Integer permission, int notificationLevel,
+                String topicTemplate, String topicTitlePlaceholder, boolean hasChildren,
+                Integer subcategoryCount, String sortOrder, Boolean sortAscending,
+                boolean showSubcategoryList, int numFeaturedTopics, String defaultView,
+                String subcategoryListStyle, String defaultTopPeriod, String defaultListFilter,
+                int minimumRequiredTags, boolean navigateToFirstPostAfterRead,
+                boolean allowGlobalTags, List<RequiredTagGroup> requiredTagGroups,
+                String readOnlyBanner, String uploadedLogo, String uploadedLogoDark,
+                String uploadedBackground, String uploadedBackgroundDark, boolean canEdit) {
             this.id = id;
             this.name = name;
             this.color = color;
@@ -1454,8 +1454,6 @@ public class Category4 {
             this.defaultListFilter = defaultListFilter;
             this.minimumRequiredTags = minimumRequiredTags;
             this.navigateToFirstPostAfterRead = navigateToFirstPostAfterRead;
-            this.allowedTags = allowedTags;
-            this.allowedTagGroups = allowedTagGroups;
             this.allowGlobalTags = allowGlobalTags;
             this.requiredTagGroups = requiredTagGroups;
             this.readOnlyBanner = readOnlyBanner;
@@ -1568,10 +1566,10 @@ public class Category4 {
 
         /**
          * Setter for permission.
-         * @param  permission  int value for permission.
+         * @param  permission  Integer value for permission.
          * @return Builder
          */
-        public Builder permission(int permission) {
+        public Builder permission(Integer permission) {
             this.permission = permission;
             return this;
         }
@@ -1638,10 +1636,10 @@ public class Category4 {
 
         /**
          * Setter for sortAscending.
-         * @param  sortAscending  String value for sortAscending.
+         * @param  sortAscending  Boolean value for sortAscending.
          * @return Builder
          */
-        public Builder sortAscending(String sortAscending) {
+        public Builder sortAscending(Boolean sortAscending) {
             this.sortAscending = sortAscending;
             return this;
         }
@@ -1723,26 +1721,6 @@ public class Category4 {
          */
         public Builder navigateToFirstPostAfterRead(boolean navigateToFirstPostAfterRead) {
             this.navigateToFirstPostAfterRead = navigateToFirstPostAfterRead;
-            return this;
-        }
-
-        /**
-         * Setter for allowedTags.
-         * @param  allowedTags  List of Object value for allowedTags.
-         * @return Builder
-         */
-        public Builder allowedTags(List<Object> allowedTags) {
-            this.allowedTags = allowedTags;
-            return this;
-        }
-
-        /**
-         * Setter for allowedTagGroups.
-         * @param  allowedTagGroups  List of Object value for allowedTagGroups.
-         * @return Builder
-         */
-        public Builder allowedTagGroups(List<Object> allowedTagGroups) {
-            this.allowedTagGroups = allowedTagGroups;
             return this;
         }
 
@@ -1932,6 +1910,26 @@ public class Category4 {
         }
 
         /**
+         * Setter for allowedTags.
+         * @param  allowedTags  List of Object value for allowedTags.
+         * @return Builder
+         */
+        public Builder allowedTags(List<Object> allowedTags) {
+            this.allowedTags = allowedTags;
+            return this;
+        }
+
+        /**
+         * Setter for allowedTagGroups.
+         * @param  allowedTagGroups  List of Object value for allowedTagGroups.
+         * @return Builder
+         */
+        public Builder allowedTagGroups(List<Object> allowedTagGroups) {
+            this.allowedTagGroups = allowedTagGroups;
+            return this;
+        }
+
+        /**
          * Setter for customFields.
          * @param  customFields  Object value for customFields.
          * @return Builder
@@ -1990,11 +1988,11 @@ public class Category4 {
                     topicTitlePlaceholder, hasChildren, subcategoryCount, sortOrder, sortAscending,
                     showSubcategoryList, numFeaturedTopics, defaultView, subcategoryListStyle,
                     defaultTopPeriod, defaultListFilter, minimumRequiredTags,
-                    navigateToFirstPostAfterRead, allowedTags, allowedTagGroups, allowGlobalTags,
-                    requiredTagGroups, readOnlyBanner, uploadedLogo, uploadedLogoDark,
-                    uploadedBackground, uploadedBackgroundDark, canEdit, styleType, emoji, icon,
-                    description, descriptionText, descriptionExcerpt, customFields,
-                    parentCategoryId, formTemplateIds, categoryTypes);
+                    navigateToFirstPostAfterRead, allowGlobalTags, requiredTagGroups,
+                    readOnlyBanner, uploadedLogo, uploadedLogoDark, uploadedBackground,
+                    uploadedBackgroundDark, canEdit, styleType, emoji, icon, description,
+                    descriptionText, descriptionExcerpt, allowedTags, allowedTagGroups,
+                    customFields, parentCategoryId, formTemplateIds, categoryTypes);
         }
     }
 }

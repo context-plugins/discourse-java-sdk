@@ -25,14 +25,14 @@
 | `DescriptionExcerpt` | `String` | Optional | - | String getDescriptionExcerpt() | setDescriptionExcerpt(String descriptionExcerpt) |
 | `TopicUrl` | `String` | Required | - | String getTopicUrl() | setTopicUrl(String topicUrl) |
 | `ReadRestricted` | `boolean` | Required | - | boolean getReadRestricted() | setReadRestricted(boolean readRestricted) |
-| `Permission` | `int` | Required | - | int getPermission() | setPermission(int permission) |
+| `Permission` | `Integer` | Required | - | Integer getPermission() | setPermission(Integer permission) |
 | `NotificationLevel` | `int` | Required | - | int getNotificationLevel() | setNotificationLevel(int notificationLevel) |
 | `TopicTemplate` | `String` | Required | - | String getTopicTemplate() | setTopicTemplate(String topicTemplate) |
 | `TopicTitlePlaceholder` | `String` | Required | - | String getTopicTitlePlaceholder() | setTopicTitlePlaceholder(String topicTitlePlaceholder) |
 | `HasChildren` | `boolean` | Required | - | boolean getHasChildren() | setHasChildren(boolean hasChildren) |
 | `SubcategoryCount` | `Integer` | Required | - | Integer getSubcategoryCount() | setSubcategoryCount(Integer subcategoryCount) |
 | `SortOrder` | `String` | Required | - | String getSortOrder() | setSortOrder(String sortOrder) |
-| `SortAscending` | `String` | Required | - | String getSortAscending() | setSortAscending(String sortAscending) |
+| `SortAscending` | `Boolean` | Required | - | Boolean getSortAscending() | setSortAscending(Boolean sortAscending) |
 | `ShowSubcategoryList` | `boolean` | Required | - | boolean getShowSubcategoryList() | setShowSubcategoryList(boolean showSubcategoryList) |
 | `NumFeaturedTopics` | `int` | Required | - | int getNumFeaturedTopics() | setNumFeaturedTopics(int numFeaturedTopics) |
 | `DefaultView` | `String` | Required | - | String getDefaultView() | setDefaultView(String defaultView) |
@@ -41,8 +41,8 @@
 | `DefaultListFilter` | `String` | Required | - | String getDefaultListFilter() | setDefaultListFilter(String defaultListFilter) |
 | `MinimumRequiredTags` | `int` | Required | - | int getMinimumRequiredTags() | setMinimumRequiredTags(int minimumRequiredTags) |
 | `NavigateToFirstPostAfterRead` | `boolean` | Required | - | boolean getNavigateToFirstPostAfterRead() | setNavigateToFirstPostAfterRead(boolean navigateToFirstPostAfterRead) |
-| `AllowedTags` | `List<Object>` | Required | - | List<Object> getAllowedTags() | setAllowedTags(List<Object> allowedTags) |
-| `AllowedTagGroups` | `List<Object>` | Required | - | List<Object> getAllowedTagGroups() | setAllowedTagGroups(List<Object> allowedTagGroups) |
+| `AllowedTags` | `List<Object>` | Optional | - | List<Object> getAllowedTags() | setAllowedTags(List<Object> allowedTags) |
+| `AllowedTagGroups` | `List<Object>` | Optional | - | List<Object> getAllowedTagGroups() | setAllowedTagGroups(List<Object> allowedTagGroups) |
 | `AllowGlobalTags` | `boolean` | Required | - | boolean getAllowGlobalTags() | setAllowGlobalTags(boolean allowGlobalTags) |
 | `RequiredTagGroups` | [`List<RequiredTagGroup>`](../../doc/models/required-tag-group.md) | Required | - | List<RequiredTagGroup> getRequiredTagGroups() | setRequiredTagGroups(List<RequiredTagGroup> requiredTagGroups) |
 | `ReadOnlyBanner` | `String` | Required | - | String getReadOnlyBanner() | setReadOnlyBanner(String readOnlyBanner) |
@@ -59,10 +59,8 @@
 ## Example
 
 ```java
-import com.example.discourse.ApiHelper;
 import com.example.discourse.models.Category4;
 import com.example.discourse.models.RequiredTagGroup;
-import java.io.IOException;
 import java.util.Arrays;
 
 Category4 category4 = new Category4.Builder(
@@ -83,7 +81,7 @@ Category4 category4 = new Category4.Builder(
     false,
     6,
     "sort_order8",
-    "sort_ascending8",
+    false,
     false,
     72,
     "default_view2",
@@ -92,16 +90,6 @@ Category4 category4 = new Category4.Builder(
     "default_list_filter6",
     152,
     false,
-    Arrays.asList(
-        ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}"),
-        ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}"),
-        ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}")
-    ),
-    Arrays.asList(
-        ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}"),
-        ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}"),
-        ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}")
-    ),
     false,
     Arrays.asList(
         new RequiredTagGroup.Builder(

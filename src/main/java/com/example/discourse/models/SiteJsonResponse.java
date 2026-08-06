@@ -46,8 +46,8 @@ public class SiteJsonResponse {
     private Object defaultDarkColorScheme;
     private List<Object> censoredRegexp;
     private Object customEmojiTranslation;
-    private String watchedWordsReplace;
-    private String watchedWordsLink;
+    private Object watchedWordsReplace;
+    private Object watchedWordsLink;
     private Object markdownAdditionalOptions;
     private Object hashtagConfigurations;
     private Object hashtagIcons;
@@ -103,8 +103,8 @@ public class SiteJsonResponse {
      * @param  defaultDarkColorScheme  Object value for defaultDarkColorScheme.
      * @param  censoredRegexp  List of Object value for censoredRegexp.
      * @param  customEmojiTranslation  Object value for customEmojiTranslation.
-     * @param  watchedWordsReplace  String value for watchedWordsReplace.
-     * @param  watchedWordsLink  String value for watchedWordsLink.
+     * @param  watchedWordsReplace  Object value for watchedWordsReplace.
+     * @param  watchedWordsLink  Object value for watchedWordsLink.
      * @param  categories  List of Category4 value for categories.
      * @param  archetypes  List of Archetype value for archetypes.
      * @param  userFields  List of Object value for userFields.
@@ -157,8 +157,8 @@ public class SiteJsonResponse {
             Object defaultDarkColorScheme,
             List<Object> censoredRegexp,
             Object customEmojiTranslation,
-            String watchedWordsReplace,
-            String watchedWordsLink,
+            Object watchedWordsReplace,
+            Object watchedWordsLink,
             List<Category4> categories,
             List<Archetype> archetypes,
             List<Object> userFields,
@@ -798,37 +798,37 @@ public class SiteJsonResponse {
 
     /**
      * Getter for WatchedWordsReplace.
-     * @return Returns the String
+     * @return Returns the Object
      */
     @JsonGetter("watched_words_replace")
-    public String getWatchedWordsReplace() {
+    public Object getWatchedWordsReplace() {
         return watchedWordsReplace;
     }
 
     /**
      * Setter for WatchedWordsReplace.
-     * @param watchedWordsReplace Value for String
+     * @param watchedWordsReplace Value for Object
      */
     @JsonSetter("watched_words_replace")
-    public void setWatchedWordsReplace(String watchedWordsReplace) {
+    public void setWatchedWordsReplace(Object watchedWordsReplace) {
         this.watchedWordsReplace = watchedWordsReplace;
     }
 
     /**
      * Getter for WatchedWordsLink.
-     * @return Returns the String
+     * @return Returns the Object
      */
     @JsonGetter("watched_words_link")
-    public String getWatchedWordsLink() {
+    public Object getWatchedWordsLink() {
         return watchedWordsLink;
     }
 
     /**
      * Setter for WatchedWordsLink.
-     * @param watchedWordsLink Value for String
+     * @param watchedWordsLink Value for Object
      */
     @JsonSetter("watched_words_link")
-    public void setWatchedWordsLink(String watchedWordsLink) {
+    public void setWatchedWordsLink(Object watchedWordsLink) {
         this.watchedWordsLink = watchedWordsLink;
     }
 
@@ -1273,8 +1273,8 @@ public class SiteJsonResponse {
         private Object defaultDarkColorScheme;
         private List<Object> censoredRegexp;
         private Object customEmojiTranslation;
-        private String watchedWordsReplace;
-        private String watchedWordsLink;
+        private Object watchedWordsReplace;
+        private Object watchedWordsLink;
         private List<Category4> categories;
         private List<Archetype> archetypes;
         private List<Object> userFields;
@@ -1334,8 +1334,8 @@ public class SiteJsonResponse {
          * @param  defaultDarkColorScheme  Object value for defaultDarkColorScheme.
          * @param  censoredRegexp  List of Object value for censoredRegexp.
          * @param  customEmojiTranslation  Object value for customEmojiTranslation.
-         * @param  watchedWordsReplace  String value for watchedWordsReplace.
-         * @param  watchedWordsLink  String value for watchedWordsLink.
+         * @param  watchedWordsReplace  Object value for watchedWordsReplace.
+         * @param  watchedWordsLink  Object value for watchedWordsLink.
          * @param  categories  List of Category4 value for categories.
          * @param  archetypes  List of Archetype value for archetypes.
          * @param  userFields  List of Object value for userFields.
@@ -1354,7 +1354,7 @@ public class SiteJsonResponse {
                 List<Object> topicFeaturedLinkAllowedCategoryIds, List<UserTheme> userThemes,
                 List<UserColorScheme> userColorSchemes, Object defaultLightColorScheme,
                 Object defaultDarkColorScheme, List<Object> censoredRegexp,
-                Object customEmojiTranslation, String watchedWordsReplace, String watchedWordsLink,
+                Object customEmojiTranslation, Object watchedWordsReplace, Object watchedWordsLink,
                 List<Category4> categories, List<Archetype> archetypes, List<Object> userFields,
                 List<Object> authProviders, boolean fullNameRequiredForSignup,
                 boolean fullNameVisibleInSignup) {
@@ -1669,20 +1669,20 @@ public class SiteJsonResponse {
 
         /**
          * Setter for watchedWordsReplace.
-         * @param  watchedWordsReplace  String value for watchedWordsReplace.
+         * @param  watchedWordsReplace  Object value for watchedWordsReplace.
          * @return Builder
          */
-        public Builder watchedWordsReplace(String watchedWordsReplace) {
+        public Builder watchedWordsReplace(Object watchedWordsReplace) {
             this.watchedWordsReplace = watchedWordsReplace;
             return this;
         }
 
         /**
          * Setter for watchedWordsLink.
-         * @param  watchedWordsLink  String value for watchedWordsLink.
+         * @param  watchedWordsLink  Object value for watchedWordsLink.
          * @return Builder
          */
-        public Builder watchedWordsLink(String watchedWordsLink) {
+        public Builder watchedWordsLink(Object watchedWordsLink) {
             this.watchedWordsLink = watchedWordsLink;
             return this;
         }

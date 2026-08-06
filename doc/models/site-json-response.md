@@ -40,8 +40,8 @@
 | `DefaultDarkColorScheme` | `Object` | Required | - | Object getDefaultDarkColorScheme() | setDefaultDarkColorScheme(Object defaultDarkColorScheme) |
 | `CensoredRegexp` | `List<Object>` | Required | - | List<Object> getCensoredRegexp() | setCensoredRegexp(List<Object> censoredRegexp) |
 | `CustomEmojiTranslation` | `Object` | Required | - | Object getCustomEmojiTranslation() | setCustomEmojiTranslation(Object customEmojiTranslation) |
-| `WatchedWordsReplace` | `String` | Required | - | String getWatchedWordsReplace() | setWatchedWordsReplace(String watchedWordsReplace) |
-| `WatchedWordsLink` | `String` | Required | - | String getWatchedWordsLink() | setWatchedWordsLink(String watchedWordsLink) |
+| `WatchedWordsReplace` | `Object` | Required | - | Object getWatchedWordsReplace() | setWatchedWordsReplace(Object watchedWordsReplace) |
+| `WatchedWordsLink` | `Object` | Required | - | Object getWatchedWordsLink() | setWatchedWordsLink(Object watchedWordsLink) |
 | `MarkdownAdditionalOptions` | `Object` | Optional | - | Object getMarkdownAdditionalOptions() | setMarkdownAdditionalOptions(Object markdownAdditionalOptions) |
 | `HashtagConfigurations` | `Object` | Optional | - | Object getHashtagConfigurations() | setHashtagConfigurations(Object hashtagConfigurations) |
 | `HashtagIcons` | `Object` | Optional | - | Object getHashtagIcons() | setHashtagIcons(Object hashtagIcons) |
@@ -270,8 +270,8 @@ SiteJsonResponse siteJsonResponse = new SiteJsonResponse.Builder(
         ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}")
     ),
     ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}"),
-    "watched_words_replace4",
-    "watched_words_link6",
+    ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}"),
+    ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}"),
     Arrays.asList(
         new Category4.Builder(
             16,
@@ -291,7 +291,7 @@ SiteJsonResponse siteJsonResponse = new SiteJsonResponse.Builder(
             false,
             74,
             "sort_order8",
-            "sort_ascending8",
+            false,
             false,
             140,
             "default_view2",
@@ -300,13 +300,6 @@ SiteJsonResponse siteJsonResponse = new SiteJsonResponse.Builder(
             "default_list_filter6",
             172,
             false,
-            Arrays.asList(
-                ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}")
-            ),
-            Arrays.asList(
-                ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}"),
-                ApiHelper.deserialize("{\"key1\":\"val1\",\"key2\":\"val2\"}")
-            ),
             false,
             Arrays.asList(
                 new RequiredTagGroup.Builder(
